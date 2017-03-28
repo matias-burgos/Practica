@@ -51,17 +51,17 @@ public class Main
 		System.out.println("Nombre del Alumno: "+p2.getNombre());
 		System.out.println("Apellido del Alumno: "+p2.getapellido());
 		System.out.println("DNI del Alumno: "+p2.getDNI());
-		System.out.println("Nacimiento del Alumno: "+p2.getNacimiento());
+		System.out.println("Nacimiento del Alumno: "+p2.nacimiento.getDia()+"/"+p2.nacimiento.getMes()+"/"+p2.nacimiento.getAnio());
 		System.out.println("Legajo del Alumno: "+p2.getLegajo());
 		//Muestreo
 		
-		/*
+		
 		System.out.println("Nombre del alumno: "+ p2.nombre);
 		System.out.println("Apellido: "+p2.apellido);
 		System.out.println("DNI: "+p2.DNI);
 		System.out.println("Legajo: "+p2.legajo);;
 		System.out.println("Fecha de naciomiento: "+p2.nacimiento.dia+"/"+p2.nacimiento.mes+"/"+p2.nacimiento.anio);
-		*/
+		
 		
 		
 		//Listas.
@@ -70,12 +70,35 @@ public class Main
 		
 		ListaPersona.add(p1);
 		ListaPersona.add(p2);
-		
-		for (Persona personita: ListaPersona)
+		int i=1;
+		for (Persona aux: ListaPersona)
 		{
-			System.out.println(personita.getapellido());
+	
+			System.out.println("Apellido de la persona "+i+":" +aux.getapellido()+"\n");
+			i++;
 		}
 		
+		
+		int cantVariables=ListaPersona.size();
+		
+		System.out.println("Cantidad de elementos en la lista: "+cantVariables);
+		for( i=0; i<cantVariables; i++)
+		{
+			Persona auxiliar=ListaPersona.get(i);
+			if(auxiliar.getNombre().equals("a"))
+			{
+				ListaPersona.remove(i);
+			}
+		}	
+		cantVariables=ListaPersona.size();
+		System.out.println("Cantidad de elementos en la lista: "+cantVariables);
+		
+		for (Persona aux: ListaPersona)
+		{
+	
+			System.out.println("Apellido de la persona "+i+":" +aux.getapellido()+"\n");
+			i++;
+		}
 		
 		 
 		
