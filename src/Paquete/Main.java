@@ -80,7 +80,7 @@ public class Main
 		
 		
 		int cantVariables=ListaPersona.size();
-		
+		int o=0;
 		System.out.println("Cantidad de elementos en la lista: "+cantVariables);
 		for( i=0; i<cantVariables; i++)
 		{
@@ -88,11 +88,14 @@ public class Main
 			if(auxiliar.getNombre().equals("a"))
 			{
 				ListaPersona.remove(i);
+				o=i;
 			}
 		}	
+		System.out.println("Se elimino la persona hubicada en el lugar de la lista Nº"+o);
 		cantVariables=ListaPersona.size();
 		System.out.println("Cantidad de elementos en la lista: "+cantVariables);
 		
+		i=0;
 		for (Persona aux: ListaPersona)
 		{
 	
